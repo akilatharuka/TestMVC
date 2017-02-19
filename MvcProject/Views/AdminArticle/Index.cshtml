@@ -1,0 +1,35 @@
+﻿@model Domain.Entities.Article
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/TinyMceArticleEditor.js"></script>
+
+    
+
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            <!-- This will contain your HtmlContent and use the TinyMCE editor-->
+            @Html.TextAreaFor(model => model.Content)
+
+            <input type="submit" value="Create" />
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to About", "About")
+    </div>
+</body>
+
+</html>

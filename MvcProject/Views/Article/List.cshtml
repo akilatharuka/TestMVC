@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable<Domain.Entities.Article>
+
+@{
+    ViewBag.Title = "List2";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+@section header{
+    @{
+        Html.RenderPartial("_HeaderNavBar");
+    }
+}
+
+@section content{
+        @foreach (var p in Model)
+        {
+            <div>
+                <h3>@p.Title</h3>
+                <h4>@p.Created</h4>
+                @p.Id
+            </div>
+        }
+
+}
+
+@section footer{
+    <p class="lead">
+        This is footer section.
+    </p>
+}
+
+
+

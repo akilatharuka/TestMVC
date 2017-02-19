@@ -1,0 +1,10 @@
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\Domain.dll.config
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\Domain.dll
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\Domain.pdb
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\EntityFramework.dll
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\EntityFramework.SqlServer.dll
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\EntityFramework.xml
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\EntityFramework.SqlServer.xml
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.dll
+F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.pdb

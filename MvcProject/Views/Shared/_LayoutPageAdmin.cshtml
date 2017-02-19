@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/testCss.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="panel-footer" >
+        @RenderSection("header", true)
+    </footer>
+
+    <footer class="panel-footer" >
+        @RenderSection("content", true)
+    </footer>
+
+    <footer class="panel-footer" >
+        @RenderSection("footer", true)
+    </footer>
+
+</body>
+</html>

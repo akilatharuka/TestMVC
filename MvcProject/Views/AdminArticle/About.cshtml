@@ -1,0 +1,39 @@
+﻿
+@{
+    //ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div> 
+
+        @section header{
+            @{
+                Html.RenderPartial("_HeaderNavBar");
+            }
+        }
+
+        @section content{
+            @Html.TextArea("This is the About Page");
+
+            <div>
+                @Html.ActionLink("Back to Index", "Index")
+            </div>
+        }
+
+        @section footer{
+            <p class="lead">
+                This is footer section.
+            </p>
+        }
+
+    </div>
+</body>
+</html>
