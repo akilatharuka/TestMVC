@@ -31,22 +31,23 @@ namespace MvcProject.Controllers
         [ValidateInput(false)]
         public ActionResult Index(Article article)
         {
-            //return View();
-            //return HttpNotFound();
             article.Title = "Test Title";
             article.Created = DateTime.Now;
-            //article.Content = "";
             article.Modified = DateTime.Now;
 
-            Article articleWithId = _repository.Insert(article);
-            _repository.Save();
+            try
+            {
+                Article articleWithId = _repository.Insert(article);
+                _repository.Save();
 
-
-            SessionStateHelper.Set(SessionStateKeys.NAME, articleWithId);
-            return RedirectToAction("Edit", "AdminArticle");
-
-
-            //return View();//redirect to edit and pass article in session
+                SessionStateHelper.Set(SessionStateKeys.NAME, articleWithId);
+                return RedirectToAction("Edit", "AdminArticle");
+            }
+            catch(Exception ex)
+            {
+                return View();
+            }
+            
         }
 
         public ActionResult About(Article article)

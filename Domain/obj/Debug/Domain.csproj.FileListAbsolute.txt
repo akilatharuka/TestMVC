@@ -8,3 +8,13 @@ F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\bin\Debug\EntityFram
 F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.dll
 F:\Codes\Personal\ItWorkExperience\ItWorkExperience1\Domain\obj\Debug\Domain.pdb
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\Domain.dll.config
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\Domain.dll
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\Domain.pdb
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\EntityFramework.dll
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\EntityFramework.SqlServer.dll
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\EntityFramework.xml
+F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\EntityFramework.SqlServer.xml
+F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.dll
+F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.pdb
