@@ -43,7 +43,7 @@ namespace MvcProject.Controllers
                 SessionStateHelper.Set(SessionStateKeys.NAME, articleWithId);
                 return RedirectToAction("Edit", "AdminArticle");
             }
-            catch(Exception ex)
+            catch(Exception exe)
             {
                 return View();
             }
@@ -71,15 +71,28 @@ namespace MvcProject.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        /*public ActionResult Edit()
         {
             //ViewBag.Name = SessionStateHelper.Get(SessionStateKeys.NAME);
 
             Article article = (Article)SessionStateHelper.Get(SessionStateKeys.NAME);
 
             return View(article);
+        }*/
+
+        public ActionResult ViewAll()
+        {
+            return View();
         }
 
+        public ActionResult Edit(int id)
+        {
+            //ViewBag.Name = SessionStateHelper.Get(SessionStateKeys.NAME);
+
+            Article article = _repository.GetById(id);
+
+            return View(article);
+        }
 
     }
 }

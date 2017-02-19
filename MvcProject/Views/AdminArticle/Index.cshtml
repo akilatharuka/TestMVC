@@ -1,5 +1,17 @@
 ﻿@model Domain.Entities.Article
 
+@{
+    ViewBag.Title = "List2";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+@section header{
+    @{
+        Html.RenderPartial("_HeaderNavBar");
+    }
+}
+
+
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +28,9 @@
 
 </head>
 <body>
-    @using (Html.BeginForm())
+
+    @section content{
+       @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         <div>
@@ -25,11 +39,23 @@
 
             <input type="submit" value="Create" />
         </div>
-    }
+       }
 
     <div>
         @Html.ActionLink("Back to About", "About")
     </div>
+
+    }
+
+    
+    @section footer{
+        <p class="lead">
+            This is footer section.
+        </p>
+    }
+
 </body>
 
 </html>
+
+

@@ -16,9 +16,11 @@
         @foreach (var p in Model)
         {
             <div>
-                <h3>@p.Title</h3>
+                @*<h3>@p.Title</h3>
                 <h4>@p.Created</h4>
-                @p.Id
+                @p.Id*@
+
+                @Html.ActionLink("Formations", "Edit", "AdminArticle", new { id = p.Id }, null)
             </div>
         }
 
