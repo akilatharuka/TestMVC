@@ -20,7 +20,7 @@
                 <h4>@p.Created</h4>
                 @p.Id*@
 
-                @Html.ActionLink("Formations", "Edit", "AdminArticle", new { id = p.Id }, null)
+                @Html.ActionLink(p.Title, "Edit", "AdminArticle", new { id = p.Id }, null)
             </div>
         }
 

@@ -31,7 +31,7 @@ namespace MvcProject.Controllers
         [ValidateInput(false)]
         public ActionResult Index(Article article)
         {
-            article.Title = "Test Title";
+            //article.Title = "Test Title";
             article.Created = DateTime.Now;
             article.Modified = DateTime.Now;
 
@@ -40,8 +40,8 @@ namespace MvcProject.Controllers
                 Article articleWithId = _repository.Insert(article);
                 _repository.Save();
 
-                SessionStateHelper.Set(SessionStateKeys.NAME, articleWithId);
-                return RedirectToAction("Edit", "AdminArticle");
+                //SessionStateHelper.Set(SessionStateKeys.NAME, articleWithId);
+                return RedirectToAction("Edit", "AdminArticle", new { id = articleWithId.Id });
             }
             catch(Exception exe)
             {

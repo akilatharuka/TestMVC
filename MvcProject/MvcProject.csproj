@@ -277,6 +277,7 @@
     <Compile Include="Areas\AdminSite\AdminSiteAreaRegistration.cs" />
     <Compile Include="Areas\PublicSite\PublicSiteAreaRegistration.cs" />
     <Compile Include="Controllers\AdminArticleController.cs" />
+    <Compile Include="Controllers\AdminArticleListController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="CustomHtmlHelpers\CustomHtmlHelper.cs" />
     <Compile Include="Global.asax.cs">
@@ -320,6 +321,8 @@
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
     <Content Include="Views\AdminArticle\Edit.cshtml" />
     <Content Include="Views\Article\Edit.cshtml" />
+    <Content Include="Views\AdminArticleList\AddArticleList.cshtml" />
+    <Content Include="Views\AdminArticleList\EditArticleList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
