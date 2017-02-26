@@ -17,6 +17,13 @@ namespace Domain.Repository
             db = new ItWorkExperienceDbContext();
             dbSet = db.Set<T>();
         }
+
+        public Repository(ItWorkExperienceDbContext context)
+        {
+            db = context;
+            dbSet = db.Set<T>();
+        }
+
         public IEnumerable<T> GetAll()
         {
             return dbSet.ToList();

@@ -16,6 +16,8 @@ namespace MvcProject.Controllers
 
         private IRepository<Article> _articleRepository = null;
 
+        private UnitOfWork unitOfWork = new UnitOfWork();
+
         public AdminArticleListController()
         {
             this._repository = new Repository<ArticleList>();
@@ -61,35 +63,51 @@ namespace MvcProject.Controllers
             return View(articleList);
         }
 
+        //[HttpPost]
+        //public ActionResult EditArticleList(ArticleList articleList, string articleId)
+        //{
+
+        //     //articleList.Articles.Add(article);
+
+        //     /* _articleRepository.Update(article);
+        //      _articleRepository.Save();
+
+
+        //      _repository.Update(articleList);
+        //      _repository.Save();*/
+
+        //    using (var context = new ItWorkExperienceDbContext())
+        //    {
+        //        articleList.Modified = DateTime.Now;
+        //        articleList.Created = DateTime.Now;
+
+        //        //Article article = _articleRepository.GetById(Int32.Parse(articleId));
+        //        Article article = context.Articles.Find(Int32.Parse(articleId));
+
+        //        article.ArticleLists.Add(articleList);
+
+        //        context.Entry(article).State = EntityState.Modified;
+        //        context.Entry(articleList).State = EntityState.Modified;
+        //        context.SaveChanges();
+        //    }
+
+        //    // db.SaveChanges();
+
+        //    return View();
+        //}
+
         [HttpPost]
         public ActionResult EditArticleList(ArticleList articleList, string articleId)
         {
-            
-             //articleList.Articles.Add(article);
 
-             /* _articleRepository.Update(article);
-              _articleRepository.Save();
+            articleList.Modified = DateTime.Now;
+            articleList.Created = DateTime.Now;
 
+            Article article = unitOfWork.ArticleRepository.GetById(Int32.Parse(articleId));
+            article.ArticleLists.Add(articleList);
 
-              _repository.Update(articleList);
-              _repository.Save();*/
-
-            using (var context = new ItWorkExperienceDbContext())
-            {
-                articleList.Modified = DateTime.Now;
-                articleList.Created = DateTime.Now;
-
-                //Article article = _articleRepository.GetById(Int32.Parse(articleId));
-                Article article = context.Articles.Find(Int32.Parse(articleId));
-
-                article.ArticleLists.Add(articleList);
-
-                context.Entry(article).State = EntityState.Modified;
-                context.Entry(articleList).State = EntityState.Modified;
-                context.SaveChanges();
-            }
-
-            // db.SaveChanges();
+            unitOfWork.ArticleRepository.Update(article);
+            unitOfWork.ArticleRepository.Save();
 
             return View();
         }
