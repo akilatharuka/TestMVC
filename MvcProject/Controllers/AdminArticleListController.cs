@@ -1,7 +1,9 @@
-﻿using Domain.Entities;
+﻿using Domain;
+using Domain.Entities;
 using Domain.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -57,6 +59,39 @@ namespace MvcProject.Controllers
             ArticleList articleList = _repository.GetById(id);
 
             return View(articleList);
+        }
+
+        [HttpPost]
+        public ActionResult EditArticleList(ArticleList articleList, string articleId)
+        {
+            
+             //articleList.Articles.Add(article);
+
+             /* _articleRepository.Update(article);
+              _articleRepository.Save();
+
+
+              _repository.Update(articleList);
+              _repository.Save();*/
+
+            using (var context = new ItWorkExperienceDbContext())
+            {
+                articleList.Modified = DateTime.Now;
+                articleList.Created = DateTime.Now;
+
+                //Article article = _articleRepository.GetById(Int32.Parse(articleId));
+                Article article = context.Articles.Find(Int32.Parse(articleId));
+
+                article.ArticleLists.Add(articleList);
+
+                context.Entry(article).State = EntityState.Modified;
+                context.Entry(articleList).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+
+            // db.SaveChanges();
+
+            return View();
         }
 
 

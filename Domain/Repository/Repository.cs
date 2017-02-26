@@ -49,6 +49,8 @@ namespace Domain.Repository
         public void Save()
         {
             db.SaveChanges();
+            Dispose(true);
+                
         }
         protected virtual void Dispose(bool disposing)
         {

@@ -9,6 +9,11 @@ namespace Domain.Entities
 {
     public class Article
     {
+        public Article()
+        {
+            ArticleLists = new HashSet<ArticleList>();
+        }
+
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }
