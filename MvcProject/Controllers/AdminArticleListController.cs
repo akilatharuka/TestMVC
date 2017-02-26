@@ -63,39 +63,6 @@ namespace MvcProject.Controllers
             return View(articleList);
         }
 
-        //[HttpPost]
-        //public ActionResult EditArticleList(ArticleList articleList, string articleId)
-        //{
-
-        //     //articleList.Articles.Add(article);
-
-        //     /* _articleRepository.Update(article);
-        //      _articleRepository.Save();
-
-
-        //      _repository.Update(articleList);
-        //      _repository.Save();*/
-
-        //    using (var context = new ItWorkExperienceDbContext())
-        //    {
-        //        articleList.Modified = DateTime.Now;
-        //        articleList.Created = DateTime.Now;
-
-        //        //Article article = _articleRepository.GetById(Int32.Parse(articleId));
-        //        Article article = context.Articles.Find(Int32.Parse(articleId));
-
-        //        article.ArticleLists.Add(articleList);
-
-        //        context.Entry(article).State = EntityState.Modified;
-        //        context.Entry(articleList).State = EntityState.Modified;
-        //        context.SaveChanges();
-        //    }
-
-        //    // db.SaveChanges();
-
-        //    return View();
-        //}
-
         [HttpPost]
         public ActionResult EditArticleList(ArticleList articleList, string articleId)
         {
@@ -105,9 +72,13 @@ namespace MvcProject.Controllers
 
             Article article = unitOfWork.ArticleRepository.GetById(Int32.Parse(articleId));
             article.ArticleLists.Add(articleList);
+            articleList.Articles.Add(article);
 
             unitOfWork.ArticleRepository.Update(article);
-            unitOfWork.ArticleRepository.Save();
+            unitOfWork.ArticleListRepository.Update(articleList);
+
+            //unitOfWork.ArticleRepository.Save();
+            unitOfWork.Save();
 
             return View();
         }
