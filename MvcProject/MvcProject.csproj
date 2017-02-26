@@ -323,6 +323,7 @@
     <Content Include="Views\Article\Edit.cshtml" />
     <Content Include="Views\AdminArticleList\AddArticleList.cshtml" />
     <Content Include="Views\AdminArticleList\EditArticleList.cshtml" />
+    <Content Include="Views\AdminArticleList\ArticleListList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

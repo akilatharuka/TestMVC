@@ -58,7 +58,8 @@ namespace MvcProject.Controllers
         public ActionResult EditArticleList(int id)
         {
 
-            ArticleList articleList = _repository.GetById(id);
+            //ArticleList articleList = _repository.GetById(id);
+            ArticleList articleList = unitOfWork.ArticleListRepository.GetById(id);
 
             return View(articleList);
         }
@@ -80,7 +81,10 @@ namespace MvcProject.Controllers
             //unitOfWork.ArticleRepository.Save();
             unitOfWork.Save();
 
-            return View();
+            ArticleList articleListUpdated = unitOfWork.ArticleListRepository.GetById(articleList.Id);
+
+            //return View(articleListUpdated);//Doesn't show the correct articles of articlesList
+            return RedirectToAction("EditArticleList", "AdminArticleList", new { id = articleList.Id });
         }
 
 
@@ -95,6 +99,11 @@ namespace MvcProject.Controllers
                             where N.Title.StartsWith(Prefix)
                             select new { N.Title, N.Id });
             return Json(CityName, JsonRequestBehavior.AllowGet);
+        }
+
+        public ViewResult ArticleListList()
+        {
+            return View(unitOfWork.ArticleListRepository.GetAll());
         }
 
     }
