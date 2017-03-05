@@ -65,23 +65,41 @@ namespace MvcProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditArticleList(ArticleList articleList, string articleId)
+        public ActionResult EditArticleList(ArticleList articleList, string articleId, string deleteArticle)
         {
 
             articleList.Modified = DateTime.Now;
             articleList.Created = DateTime.Now;
 
-            Article article = unitOfWork.ArticleRepository.GetById(Int32.Parse(articleId));
-            article.ArticleLists.Add(articleList);
-            articleList.Articles.Add(article);
+            if(!string.IsNullOrEmpty(articleId))
+            {
+                Article article = unitOfWork.ArticleRepository.GetById(Int32.Parse(articleId));
+                article.ArticleLists.Add(articleList);
+                articleList.Articles.Add(article);
 
-            unitOfWork.ArticleRepository.Update(article);
-            unitOfWork.ArticleListRepository.Update(articleList);
+                unitOfWork.ArticleRepository.Update(article);
+                unitOfWork.ArticleListRepository.Update(articleList);
+            }
+
+            else if (!string.IsNullOrEmpty(deleteArticle))
+            {
+                Article deletingArticle = unitOfWork.ArticleRepository.GetById(Int32.Parse(deleteArticle));
+
+                ArticleList updatingArticleList = unitOfWork.ArticleListRepository.GetById(articleList.Id);
+
+                deletingArticle.ArticleLists.Remove(updatingArticleList);
+                updatingArticleList.Articles.Remove(deletingArticle);
+
+                unitOfWork.ArticleRepository.Update(deletingArticle);
+                unitOfWork.ArticleListRepository.Update(updatingArticleList);
+            }
+
+            
 
             //unitOfWork.ArticleRepository.Save();
             unitOfWork.Save();
 
-            ArticleList articleListUpdated = unitOfWork.ArticleListRepository.GetById(articleList.Id);
+            //ArticleList articleListUpdated = unitOfWork.ArticleListRepository.GetById(articleList.Id);
 
             //return View(articleListUpdated);//Doesn't show the correct articles of articlesList
             return RedirectToAction("EditArticleList", "AdminArticleList", new { id = articleList.Id });

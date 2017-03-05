@@ -73,6 +73,7 @@
                 @p.Id*@
 
                     @Html.ActionLink(p.Title, "Edit", "AdminArticle", new { id = p.Id }, null)
+                    <button name="deleteArticle" value="@p.Id">Delete</button><br />
                 </div>
             }
 
