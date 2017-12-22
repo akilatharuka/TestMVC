@@ -23,5 +23,7 @@ namespace Domain.Entities
 
         public virtual ICollection<ArticleList> ArticleLists { get; set; }
 
+        //Test Change 1
+
     }
 }

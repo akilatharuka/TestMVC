@@ -76,3 +76,42 @@ F:\Codes\Git Clones\TestMVC\MvcProject\bin\System.Web.Mvc.xml
 F:\Codes\Git Clones\TestMVC\MvcProject\obj\Debug\MvcProject.csprojResolveAssemblyReference.cache
 F:\Codes\Git Clones\TestMVC\MvcProject\obj\Debug\MvcProject.dll
 F:\Codes\Git Clones\TestMVC\MvcProject\obj\Debug\MvcProject.pdb
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\csc.exe
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\System.Collections.Immutable.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\vbc.exe
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\VBCSCompiler.exe
+D:\TestProjects\TestMVC\MvcProject\bin\roslyn\VBCSCompiler.exe.config
+D:\TestProjects\TestMVC\MvcProject\bin\MvcProject.dll.config
+D:\TestProjects\TestMVC\MvcProject\bin\MvcProject.dll
+D:\TestProjects\TestMVC\MvcProject\bin\MvcProject.pdb
+D:\TestProjects\TestMVC\MvcProject\bin\Domain.dll
+D:\TestProjects\TestMVC\MvcProject\bin\EntityFramework.dll
+D:\TestProjects\TestMVC\MvcProject\bin\EntityFramework.SqlServer.dll
+D:\TestProjects\TestMVC\MvcProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TestProjects\TestMVC\MvcProject\bin\Microsoft.Web.Infrastructure.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Helpers.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Mvc.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Razor.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.Deployment.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.dll
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.Razor.dll
+D:\TestProjects\TestMVC\MvcProject\bin\Domain.pdb
+D:\TestProjects\TestMVC\MvcProject\bin\EntityFramework.xml
+D:\TestProjects\TestMVC\MvcProject\bin\EntityFramework.SqlServer.xml
+D:\TestProjects\TestMVC\MvcProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Razor.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.Deployment.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Webpages.Razor.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Helpers.xml
+D:\TestProjects\TestMVC\MvcProject\bin\System.Web.Mvc.xml
+D:\TestProjects\TestMVC\MvcProject\obj\Debug\MvcProject.csprojResolveAssemblyReference.cache
+D:\TestProjects\TestMVC\MvcProject\obj\Debug\MvcProject.dll
+D:\TestProjects\TestMVC\MvcProject\obj\Debug\MvcProject.pdb

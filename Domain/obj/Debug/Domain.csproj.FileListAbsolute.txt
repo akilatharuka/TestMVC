@@ -18,3 +18,13 @@ F:\Codes\Git Clones\TestMVC\Domain\bin\Debug\EntityFramework.SqlServer.xml
 F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.dll
 F:\Codes\Git Clones\TestMVC\Domain\obj\Debug\Domain.pdb
+D:\TestProjects\TestMVC\Domain\bin\Debug\Domain.dll.config
+D:\TestProjects\TestMVC\Domain\bin\Debug\Domain.dll
+D:\TestProjects\TestMVC\Domain\bin\Debug\Domain.pdb
+D:\TestProjects\TestMVC\Domain\bin\Debug\EntityFramework.dll
+D:\TestProjects\TestMVC\Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\TestProjects\TestMVC\Domain\bin\Debug\EntityFramework.xml
+D:\TestProjects\TestMVC\Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\TestProjects\TestMVC\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\TestProjects\TestMVC\Domain\obj\Debug\Domain.dll
+D:\TestProjects\TestMVC\Domain\obj\Debug\Domain.pdb
